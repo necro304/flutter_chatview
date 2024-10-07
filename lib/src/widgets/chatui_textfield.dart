@@ -265,6 +265,15 @@ class _ChatUITextFieldState extends State<ChatUITextField> {
                                         ?.galleryIconColor,
                                   ),
                             ),
+                          if (sendMessageConfig?.enableCustomIcon ?? false)
+                            IconButton(
+                              constraints: const BoxConstraints(),
+                              onPressed: (textFieldConfig?.enabled ?? true)
+                                  ? sendMessageConfig?.onCustomIconPressed
+                                  : null,
+                              icon: sendMessageConfig?.customIcon ??
+                                  const Icon(Icons.add),
+                            ),
                         ],
                         if ((sendMessageConfig?.allowRecordingVoice ?? false) &&
                             !kIsWeb &&

@@ -65,6 +65,9 @@ class SendMessageConfiguration {
   /// Enable/disable image picker from gallery. Enabled by default.
   final bool enableGalleryImagePicker;
 
+  /// custom icon Button example file_picker
+  final bool enableCustomIcon;
+
   /// Enable/disable send image from camera. Enabled by default.
   final bool enableCameraImagePicker;
 
@@ -76,6 +79,11 @@ class SendMessageConfiguration {
 
   /// Configuration for cancel voice recording
   final CancelRecordConfiguration? cancelRecordConfiguration;
+
+
+  final Widget? customIcon;
+
+  final VoidCallback? onCustomIconPressed;
 
   const SendMessageConfiguration({
     this.textFieldConfig,
@@ -91,9 +99,12 @@ class SendMessageConfiguration {
     this.allowRecordingVoice = true,
     this.enableCameraImagePicker = true,
     this.enableGalleryImagePicker = true,
+    this.enableCustomIcon = false,
     this.voiceRecordingConfiguration,
     this.micIconColor,
     this.cancelRecordConfiguration,
+    this.customIcon,
+    this.onCustomIconPressed,
   });
 }
 

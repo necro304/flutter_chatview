@@ -204,6 +204,11 @@ class _ChatScreenState extends State<ChatScreen> {
               extendWaveform: true,
             ),
           ),
+          customIcon: const Icon(Icons.file_upload, color: Colors.white38),
+          enableCustomIcon: true,
+          onCustomIconPressed: () {
+            debugPrint('Custom Icon Pressed');
+          },
         ),
         chatBubbleConfig: ChatBubbleConfiguration(
           outgoingChatBubbleConfig: ChatBubble(
